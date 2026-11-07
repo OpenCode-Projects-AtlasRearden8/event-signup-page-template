@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320" role="img" aria-label="Placeholder photo slot">
+  <rect width="480" height="320" fill="#f4eefe"/>
+  <rect x="24" y="24" width="432" height="272" rx="14" fill="#ffffff" stroke="#e7e0d4" stroke-width="2"/>
+  <circle cx="240" cy="128" r="34" fill="#6d28d9" opacity="0.85"/>
+  <path d="M225 128 l10 12 l20 -26" stroke="#ffffff" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="240" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#581c87">Photo slot</text>
+  <text x="240" y="226" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#6d6357">Replace me in data/event.json</text>
+</svg>

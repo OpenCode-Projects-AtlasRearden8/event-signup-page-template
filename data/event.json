@@ -1,0 +1,54 @@
+{
+  "event": {
+    "kind": "book launch",
+    "title": "The Massive AI Manual: Launch Night",
+    "tagline": "AI, explained by a friend \u2014 come ask anything.",
+    "description": "Celebrating the release of The Massive AI Manual, the beginner-friendly guide that explains AI like a friend would: plain English, step by step, never condescending.\nDylan reads a short excerpt, walks through two live demos (no slides, promise), and answers every question \u2014 including the ones you think are too basic. They never are.\nSigned copies will be available."
+  },
+  "when": {
+    "starts": "2026-12-05T18:00:00",
+    "ends": "2026-12-05T20:00:00",
+    "timezone": "America/Indiana/Indianapolis"
+  },
+  "where": {
+    "venue": "Community room, Cornerstone Books",
+    "address_lines": ["124 Main Street", "Middletown, IN 46058"],
+    "map_url": "https://www.openstreetmap.org/#map=17/40.0/-86.3",
+    "getting_there": "Free lot behind the store; the #12 bus stops at the corner."
+  },
+  "contact": {
+    "organizer": "Asdale Dynamics, LLC",
+    "email": "rsvp@asdale.example.com"
+  },
+  "capacity_note": "Seats are limited to 40 \u2014 first come, first reserved.",
+  "cost": "Free \u00b7 signed copies of the book available ($24)",
+  "accessibility_notes": [
+    "Step-free entrance with an automatic door; the greeter can help.",
+    "Reserved seating up front for anyone who asks.",
+    "Live captions on the big screen during the demos.",
+    "A quiet corner in the back with lower lighting if you need a break.",
+    "Service animals welcome; water bowls provided.",
+    "Welcome to bring fidget tools, headphones, or a support person."
+  ],
+  "waiting_list": {
+    "enabled": true,
+    "note": "The room holds 40 and our last launch filled up in ten days. If RSVPs are closed, email us anyway \u2014 we seat the waiting list in order, and no-shows free up seats each time."
+  },
+  "gallery_slots": [
+    {
+      "src": "assets/placeholder.svg",
+      "alt": "Placeholder gallery slot 1 \u2014 a photo of a full room at a past event goes here.",
+      "caption": "Our last launch: 38 seats, one very happy crowd."
+    },
+    {
+      "src": "assets/placeholder.svg",
+      "alt": "Placeholder gallery slot 2 \u2014 a photo of a live demo while the audience watches goes here.",
+      "caption": "Dylan demoing the manual's guidance live."
+    },
+    {
+      "src": "assets/placeholder.svg",
+      "alt": "Placeholder gallery slot 3 \u2014 a photo of the signing table with stacked books goes here.",
+      "caption": "The signing table, back by popular demand."
+    }
+  ]
+}

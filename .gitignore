@@ -1,0 +1,9 @@
+Python artifacts and local builds that should never be committed:
+
+__pycache__/
+*.pyc
+dist/
+
+Note: the built index.html, *.ics, and .nojekyll ARE committed so GitHub
+Pages works immediately after "Deploy from a branch" — run build.py to
+refresh them after editing data/event.json.

@@ -1,0 +1,323 @@
+/* Event Signup Page Template
+   Warm, plain-English, accessibility-first styles.
+   No external fonts or CDNs: everything loads from your own Pages site. */
+
+:root {
+  --bg: #fbf8f3;
+  --surface: #ffffff;
+  --ink: #2b2620;
+  --muted: #6d6357;
+  --accent: #6d28d9;
+  --accent-strong: #581c87;
+  --accent-soft: #f4eefe;
+  --ok: #166534;
+  --line: #e7e0d4;
+  --radius: 14px;
+  --shadow: 0 1px 2px rgba(43, 38, 32, 0.06), 0 10px 30px rgba(43, 38, 32, 0.07);
+  --font: ui-sans-serif, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --mono: ui-monospace, "Cascadia Mono", "SF Mono", Menlo, Consolas, monospace;
+}
+
+* { box-sizing: border-box; }
+
+html {
+  color-scheme: light;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 0;
+  background: var(--accent-strong);
+  color: #fff;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0 0 var(--radius) var(--radius);
+  z-index: 10;
+}
+.skip-link:focus { left: 1rem; }
+
+/* ---------- Header ---------- */
+
+.site-header {
+  max-width: 46rem;
+  margin: 0 auto;
+  padding: 3.5rem 1.25rem 1rem;
+  text-align: center;
+}
+
+.kicker {
+  display: inline-block;
+  margin: 0 0 1rem;
+  padding: 0.3rem 0.9rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--muted);
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.event-title {
+  margin: 0 0 0.5rem;
+  font-size: clamp(2rem, 5vw, 2.9rem);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.tagline {
+  margin: 0.5rem 0 0;
+  color: var(--muted);
+  font-size: 1.2rem;
+}
+
+/* ---------- Layout ---------- */
+
+.content {
+  max-width: 46rem;
+  margin: 0 auto;
+  padding: 0 1.25rem 3rem;
+}
+
+.section {
+  margin: 2.5rem 0;
+  scroll-margin-top: 2rem;
+}
+
+.lede {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.75rem;
+}
+
+.lede-text { margin: 0; font-size: 1.1rem; }
+
+h2 {
+  margin: 0 0 0.75rem;
+  font-size: 1.35rem;
+  letter-spacing: -0.01em;
+}
+
+/* ---------- Date / time / location cards ---------- */
+
+.card-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.1rem 1.2rem;
+  box-shadow: var(--shadow);
+}
+
+.card h2,
+.card .card-key {
+  margin: 0 0 0.35rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.card-value {
+  margin: 0;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.card-link {
+  font-weight: 400;
+  font-size: 0.95rem;
+  display: inline-block;
+  margin-top: 0.35rem;
+}
+
+/* ---------- RSVP ---------- */
+
+.rsvp {
+  background: var(--accent-soft);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.75rem;
+}
+
+.rsvp-title { color: var(--accent-strong); }
+
+.rsvp-seats { margin: 0.25rem 0 0; color: var(--ok); font-weight: 600; }
+
+.rsvp-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  margin: 1.25rem 0 0.5rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.4rem;
+  border-radius: 999px;
+  border: 2px solid var(--accent-strong);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+}
+
+.btn-primary {
+  background: var(--accent-strong);
+  color: #fff;
+}
+.btn-primary:hover { background: var(--accent); border-color: var(--accent); }
+
+.btn-ghost {
+  background: transparent;
+  color: var(--accent-strong);
+}
+.btn-ghost:hover { background: rgba(109, 40, 217, 0.08); }
+
+.copy-status { margin: 0.25rem 0; color: var(--ok); font-weight: 600; }
+.copy-status:empty { display: none; }
+
+.rsvp-note { color: var(--muted); font-size: 0.95rem; margin: 0.5rem 0 0; }
+
+/* Waiting list / notices */
+
+.notice {
+  border-left: 5px solid var(--accent);
+  background: var(--surface);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  border-top: 1px solid var(--line);
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding: 1.25rem 1.5rem;
+}
+
+.notice h2 { margin-bottom: 0.35rem; }
+.notice p { margin: 0.35rem 0; }
+
+/* ---------- Accessibility notes ---------- */
+
+.notes-list {
+  margin: 0.5rem 0 0;
+  padding-left: 1.4rem;
+}
+
+.notes-list li { margin: 0.4rem 0; }
+.notes-list li::marker { color: var(--accent); }
+
+/* ---------- Gallery ---------- */
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.gallery-slot {
+  margin: 0;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.gallery-slot img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.gallery-slot figcaption {
+  padding: 0.7rem 1rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+  border-top: 1px solid var(--line);
+}
+
+/* ---------- Footer ---------- */
+
+.site-footer {
+  border-top: 1px solid var(--line);
+  background: var(--surface);
+}
+
+.site-footer > :first-child { margin-top: 0; }
+.site-footer > :last-child { margin-bottom: 0; }
+
+.site-footer {
+  max-width: 46rem;
+  margin: 0 auto;
+  padding: 1.75rem 1.25rem 2.5rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.site-footer a { color: var(--accent-strong); }
+
+.footer-org { color: var(--ink); font-weight: 600; }
+
+/* ---------- Links & focus ---------- */
+
+a { color: var(--accent-strong); }
+
+a:hover { color: var(--accent); }
+
+:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+code {
+  font-family: var(--mono);
+  font-size: 0.9em;
+  background: var(--accent-soft);
+  border-radius: 4px;
+  padding: 0.1em 0.35em;
+}
+
+/* The copy button only works with JS; hide it for no-JS readers
+   so the email button is the obvious remaining path. */
+body:not(.js) .copy-btn { display: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; animation: none !important; }
+}

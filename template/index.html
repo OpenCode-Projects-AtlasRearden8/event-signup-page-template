@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{PAGE_TITLE}}</title>
+  <meta name="description" content="{{META_DESCRIPTION}}">
+  <meta property="og:title" content="{{PAGE_TITLE}}">
+  <meta property="og:description" content="{{META_DESCRIPTION}}">
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <p class="kicker">{{KICKER}}</p>
+    <h1 class="event-title">{{TITLE}}</h1>
+    {{TAGLINE_HTML}}
+  </header>
+
+  <main id="main" class="content">
+
+    <section class="section lede" aria-label="About this event">
+      <p class="lede-text">{{DESCRIPTION_HTML}}</p>
+    </section>
+
+    <section id="event-cards" class="section" aria-label="When and where">
+      {{CARDS_HTML}}
+    </section>
+
+    {{RSVP_SECTION_HTML}}
+
+    {{WAITING_LIST_HTML}}
+
+    {{ACCESSIBILITY_HTML}}
+
+    {{GALLERY_HTML}}
+
+  </main>
+
+  <footer class="site-footer">
+{{FOOTER_HTML}}
+  </footer>
+
+  <script type="application/json" id="event-data">{{EVENT_JSON}}</script>
+  <script src="assets/app.js" defer></script>
+</body>
+</html>
